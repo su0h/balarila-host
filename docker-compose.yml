@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: balarila-backend-container
+    ports:
+      - "8080:8080"
+    depends_on:
+      - model-api
+    networks:
+      - balarila-backend
+  
+  model-api:
+    build:
+      context: ./model_api
+    container_name: balarila-model-container
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_ALLOWED_HOSTS=* 
+    command: uvicorn model_api.asgi:application --host 0.0.0.0 --port 8000
+    networks:
+      - balarila-backend
+
+networks:
+  balarila-backend:
+    driver: bridge

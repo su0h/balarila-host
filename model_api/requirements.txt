@@ -1,0 +1,13 @@
+Django>=3.2,<4.0
+django-ninja>=0.12.1,<0.13 # last version supporting Python 3.7
+uvicorn[standard]<0.22.0 # 0.22+ drops Python 3.7 support
+
+# TODO: Include installation of requirements for Balarila model
+# torch==1.10.0
+# allennlp==0.8.4
+# python-Levenshtein==0.12.1
+# transformers==4.11.3
+# scikit-learn==0.20.0
+# sentencepiece==0.1.95
+# overrides==4.1.2
+# numpy==1.19.5

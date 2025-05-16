@@ -1,0 +1,3 @@
+backend/mvnw text eol=lf
+backend/*.cmd text eol=crlf
+model_api/*.sh text eol=lf
